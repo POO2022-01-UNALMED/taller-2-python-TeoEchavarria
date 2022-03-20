@@ -48,6 +48,3 @@ class Motor:
         if tipo in tiposPermitidos:
             self.tipo = tipo
     
-
-if __name__ == '__main__':
-    pass
