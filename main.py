@@ -6,6 +6,12 @@ class Asiento:
         self.color = color
         self.precio = precio
         self.registro = registro
+    
+    @staticmethod
+    def cambiarColor(self, color):
+        coloresPermitidos = ['rojo', 'verde', 'amarillo', 'negro', 'blanco']
+        if color in coloresPermitidos:
+            self.color = color
 
 class Auto:
     def __init__(self, modelo, precio, asientos, marca, motor, registro):
