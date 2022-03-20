@@ -17,6 +17,14 @@ class Motor:
         self.numerosCilindros = numerosCilindros
         self.tipo = tipo
         self.registro = registro
+        
+    def cambiarRegistro(self, regitro):
+        self.registro = regitro
+    
+    def asignarTipo(self, tipo):
+        tiposPermitidos = ['electrico', 'gasolina']
+        if tipo in tiposPermitidos:
+            self.tipo = tipo
 
 class Auto:
     cantidadCreados = 0
