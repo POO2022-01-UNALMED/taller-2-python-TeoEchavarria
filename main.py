@@ -40,10 +40,13 @@ class Auto:
         return sum(1 for i in self.asientos if type(i) == Asiento)
     
     def verificarIntegridad(self):
-        if self.registro == self.motor.registro and sum([1 for i in self.asientos if i.registro == self.registro] == len(self.asientos)):
-            return 'Auto original'
+        if self.registro == self.motor.registro:
+            for i in self.asientos:
+                if self.registro != i.registro:
+                    return "Las piezas no son originales"
+            return "Auto originak"
         else:
-            return 'Las piezas no son originales'
+            return "Las piezas no son originales"
     
 
 if __name__ == '__main__':
