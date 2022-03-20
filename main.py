@@ -1,11 +1,26 @@
+from turtle import color
+
+
 class Asiento:
-    pass
+    def __init__(self, color, precio, registro):
+        self.color = color
+        self.precio = precio
+        self.registro = registro
 
 class Auto:
-    pass
+    def __init__(self, modelo, precio, asientos, marca, motor, registro):
+        self.modelo = modelo
+        self.precio = precio
+        self.asientos = asientos
+        self.marca = marca
+        self.motor = motor
+        self.registro = registro
 
 class Motor:
-    pass
+    def __init__(self, numerosCilindros, tipo, registro):
+        self.numerosCilindros = numerosCilindros
+        self.tipo = tipo
+        self.registro = registro
 
 if __name__ == '__main__':
     pass
