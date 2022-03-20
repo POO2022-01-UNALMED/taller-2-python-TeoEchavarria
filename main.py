@@ -44,7 +44,7 @@ class Auto:
             for i in self.asientos:
                 if self.registro != i.registro:
                     return "Las piezas no son originales"
-            return "Auto originak"
+            return "Auto original"
         else:
             return "Las piezas no son originales"
     
