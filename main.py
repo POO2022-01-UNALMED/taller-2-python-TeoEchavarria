@@ -8,8 +8,15 @@ class Asiento:
         self.registro = registro
     
     def cambiarColor(self, color):
-        coloresPermitidos = ['rojo', 'verde', 'amarillo', 'negro', 'blanco']
-        if color in coloresPermitidos:
+        if color == "rojo":
+            self.color = color
+        elif color == "verde":
+            self.color = color
+        elif color == "amarillo":
+            self.color = color
+        elif color == "negro":
+            self.color = color
+        elif color == "blanco":
             self.color = color
 
 class Auto:
