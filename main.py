@@ -12,20 +12,6 @@ class Asiento:
         if color in coloresPermitidos:
             self.color = color
 
-class Motor:
-    def __init__(self, numerosCilindros, tipo, registro):
-        self.numerosCilindros = numerosCilindros
-        self.tipo = tipo
-        self.registro = registro
-        
-    def cambiarRegistro(self, regitro):
-        self.registro = regitro
-    
-    def asignarTipo(self, tipo):
-        tiposPermitidos = ['electrico', 'gasolina']
-        if tipo in tiposPermitidos:
-            self.tipo = tipo
-
 class Auto:
     cantidadCreados = 0
     def __init__(self, modelo, precio, asientos, marca, motor, registro):
@@ -33,7 +19,7 @@ class Auto:
         self.precio = precio
         self.asientos = asientos
         self.marca = marca
-        self.motor = Motor
+        self.motor = motor
         self.registro = registro
 
     def cantidadAsientos(self):
@@ -47,6 +33,20 @@ class Auto:
             return "Auto original"
         else:
             return "Las piezas no son originales"
+
+class Motor:
+    def __init__(self, numerosCilindros, tipo, registro):
+        self.numerosCilindros = numerosCilindros
+        self.tipo = tipo
+        self.registro = registro
+        
+    def cambiarRegistro(self, regitro):
+        self.registro = regitro
+    
+    def asignarTipo(self, tipo):
+        tiposPermitidos = ['electrico', 'gasolina']
+        if tipo in tiposPermitidos:
+            self.tipo = tipo
     
 
 if __name__ == '__main__':
